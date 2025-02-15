@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unveiling the Journey to Success</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+
+</head>
+
+<body>
+    <header class="modern-header">
+        <div class="container">
+            <h1>Unveiling the Journey to Success: A Data-Driven Tale of Placements</h1>
+        </div>
+    </header>
+    <div class="abstract">
+        <h2 class="mid">Abstract</h2>
+        <p>
+            This project is a study of a placement dataset from Kaggle. I collected data about students and their
+            job placements. I cleaned the data by removing rows with missing values, deleting the unnecessary
+            'studentid' column, and taking out duplicate records. I also combined internships, projects, and
+            certifications
+            into one measure called the "experience score." After cleaning, I explored the data to find patterns and
+            then
+            used data modeling to predict placement outcomes.
+        </p>
+    </div>
+
+    <main>
+        <section>
+            <div>
+                <h2>The Secrets Behind Landing Your Dream Job</h2>
+                <p>Placement season—it's the defining moment for every student stepping into the professional world.
+                    Some
+                    land jobs successfully, while others struggle despite strong academic records. But what factors
+                    truly
+                    influence placements? Does CGPA hold the key, or do internships, projects, and soft skills play a
+                    bigger
+                    role? Understanding these dynamics can empower students to take strategic steps toward success.</p>
+                <p>I decided to explore my placement data of 10,000 student records to find patterns and hidden insights
+                    that
+                    could demystify the placement process. If you're a student preparing for placements, this analysis
+                    could
+                    provide the roadmap you need to optimize your journey.</p>
+            </div>
+        </section>
+        <section>
+            <div class="text-content">
+                <h2>Does Experience Make a Difference?</h2>
+                <p>We often hear that internships, projects, and certifications boost employability. But is that really
+                    the
+                    case? To answer this, I created an "Experience Score" by summing up the number of internships,
+                    projects,
+                    and workshops/certifications each student had.</p>
+                <p>Observations:</p>
+                <ul>
+                    <li>Students with an <strong>Experience Score of 4 or more</strong> had a significantly higher
+                        chance of
+                        placement.89% of students with CGPA ≥8.5 were placed.</li>
+                    <li>Even with a lower CGPA, those with multiple internships and projects were placed more often than
+                        those with just academic excellence.</li>
+                    <li>However, there were some students with high experience scores who still weren't
+                        placed—suggesting
+                        other factors at play.</li>
+                </ul>
+                <p>→ <strong>Takeaway:</strong> Don't just focus on grades—gain hands-on experience through
+                    internships
+                    and
+                    projects to stand out in the job market.</p>
+            </div>
+            <img src="images/exp4.png" alt="Experience Score vs. Placement Status">
+
+        </section>
+
+        <section>
+            <div class="text-content">
+                <h2>The CGPA Debate: How Much Does It Matter?</h2>
+                <p>CGPA is often viewed as the golden ticket to landing a job. But is it the ultimate factor? I analyzed
+                    the
+                    CGPA distributions for placed and non-placed students.</p>
+
+                <p>Observations:</p>
+                <ul>
+                    <li>The average CGPA for <strong>placed students was noticeably higher</strong> than for unplaced
+                        students.</li>
+                    <li>Even so, <strong>some students with high CGPAs remained unplaced</strong>, proving that
+                        academics
+                        alone don’t guarantee success.</li>
+                    <li>The KDE plot showed a clear rightward shift for placed students, indicating that while CGPA
+                        matters,
+                        it's not the only determinant.</li>
+                </ul>
+                <p>→ <strong>Takeaway:</strong> Maintain a strong academic record, but remember that other skills and
+                    experiences matter just as much.</p>
+            </div>
+            <img src="images/cgpa.png" alt="KDE Plot of CGPA for Placed vs. Not Placed">
+        </section>
+
+        <section>
+            <div class="text-content">
+                <h2>Internships: How Many Are Enough?</h2>
+                <p>Even we consider Internships in experience score,internships are far more important in it.They
+                    bridge the gap between theory and real-world applications. </p>
+
+                <p>Observations:</p>
+                <ul>
+                    <li>Students with <strong>0 or 1 internship had lower placement ratios</strong>, with nearly equal
+                        numbers of placed and unplaced students.</li>
+                    <li>The placement ratio <strong>jumped to 2:1 for students with 2 or more internships</strong>.</li>
+                    <li>Internships clearly play a significant role, but they need to be supplemented with other skills.
+                    </li>
+                </ul>
+                <p>→ <strong>Takeaway:</strong> Aim for at least two internships to maximize your employability and
+                    gain
+                    industry-relevant experience.</p>
+            </div>
+            <img src="images/intsp.png" alt="Number of Internships vs. Placement Status">
+        </section>
+
+        <section>
+            <div class="text-content">
+                <h2>Soft Skills & Aptitude: The Hidden Game Changers</h2>
+                <p>Soft skills are communication abilities that help individuals collaborate, adapt, and lead
+                    effectively in the workplace.They include teamwork, problem-solving, emotional intelligence,
+                    and leadership. Aptitude refers to a person’s natural ability to learn, analyze, and solve problems
+                    efficiently. It is often measured through logical reasoning, numerical ability, and critical
+                    thinking tests.
+
+
+                    I analyzed how soft skill ratings and aptitude test scores influenced placements.</p>
+
+                <p>Key Insights:</p>
+                <ul>
+                    <li>Almost all placed students had a <strong>soft skills rating above 4.5</strong>.</li>
+                    <li>Aptitude test scores above <strong>85 were common among 95% placed students</strong>.</li>
+                    <li>Those with <strong>low soft skills ratings (<4) and aptitude scores (<70%) struggled</strong> to
+                                get
+                                placed.</li>
+                </ul>
+                <p>→ <strong>Takeaway:</strong> Work on your communication, problem solving, and analytical skills—they
+                    make a crucial difference in hiring decisions.</p>
+            </div>
+            <img src="images/ss.png" alt="Soft Skill Ratings & Aptitude Scores of Placed vs. Not Placed Students">
+        </section>
+
+        <section>
+            <div>
+                <h2>Additional Insights</h2>
+                <p>In campus life, extra-curricular activities help students discover their interests and develop
+                    leadership skills.</p>
+
+
+                <p>Outcomes:</p>
+                <ul>
+                    <li>Students involved in extracurricular activities had a <strong>higher placement rate</strong>
+                        than those who weren’t.</li>
+                    <li>Leadership roles in clubs or events helped students showcase soft skills, making them more
+                        attractive to recruiters.</li>
+                </ul>
+
+
+
+                <ul>
+                    <li>Students who underwent structured placement training had a <strong>20% higher placement
+                            rate</strong> than those who didn’t.</li>
+                    <li>Training programs helped students refine resumes, prepare for interviews, and improve aptitude
+                        skills.</li>
+                </ul>
+
+
+
+                <ul>
+                    <li>Students with higher <strong>SSC(Class 10th) and HSC(Class 12th) scores</strong> had a
+                        significantly
+                        <strong>higher
+                            placement rate</strong> than those with lower scores.
+                    </li>
+                    <li>Higher <strong>aptitude test scores correlated with better placement outcomes</strong>, with
+                        most placed students scoring above <strong>80</strong>.</li>
+                    <li>A strong combination of robust academics and aptitude gave candidates a competitive edge in
+                        securing job offers.</li>
+                </ul>
+
+                <p>→ <strong>Takeaway:</strong> Get involved in activities outside academics, work on developing strong
+                    skills, improve your aptitude, and take advantage of placement training programs—they can give you a
+                    significant edge.</p>
+            </div>
+        </section>
+
+
+
+        <section>
+            <div class="text-content">
+                <h2>Final Takeaways: Cracking the Placement Code</h2>
+                <ul>
+                    <li> <strong>Experience matters!</strong> A well-rounded portfolio of internships and projects
+                        significantly increases placement chances.</li>
+                    <li> <strong>CGPA is important, but not everything is CGPA.</strong> High CGPA students do well, but
+                        those
+                        with experience and strong skills perform even better.</li>
+                    <li> <strong>Internships should be prioritized.</strong> Completing at least two internships
+                        dramatically improves employability.</li>
+                    <li> <strong>Soft skills & aptitude make a difference.</strong> Candidates with strong
+                        communication
+                        and analytical abilities are favored by recruiters.</li>
+                    <li> <strong>Extracurriculars and training provide an edge.</strong> Engage in leadership roles
+                        and
+                        take placement training seriously.</li>
+                    <li> <strong>Actionable Steps:</strong> If you're preparing for placements, focus on
+                        <strong>practical
+                            exposure, skill-building, and communication training</strong> along with academics.
+                    </li>
+                </ul>
+                <p>This journey into placement data revealed powerful insights that go beyond mere numbers. The key to
+                    success isn't just one factor—it's a mix of experience, skills, and preparation. Take control of
+                    your
+                    placement journey, and give yourself the best possible chance at landing your dream job! </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Data Driven Insights.</p>
+    </footer>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
